@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+/* font-family: "Karla", serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: black;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  margin: 1.5rem 10rem;
+}
+
+header h1 {
+  font-family: "Karla", serif;
+  font-weight: 800;
+  font-size: 2rem;
+}/*# sourceMappingURL=App.css.map */
