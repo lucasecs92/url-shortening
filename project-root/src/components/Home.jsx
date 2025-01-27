@@ -12,7 +12,7 @@ function Home() {
                     </p>
                 </section>
                 <img
-                    className='img-work' 
+                    className="img-work" 
                     src={imgWork} 
                     alt="Illustration of a person working on a computer" 
                 />
@@ -21,6 +21,7 @@ function Home() {
             <search className="search">
                 <input
                     className="search-field"
+                    id="search-field"
                     type="search"
                     placeholder="Cole o link aqui..."
                 />

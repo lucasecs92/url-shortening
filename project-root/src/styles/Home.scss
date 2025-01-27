@@ -2,40 +2,45 @@
     margin: 5rem 10rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     position: relative;
 }
 
 .wrap-top {
     width: 100%;
     margin: 6rem 0 16rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
 
 .wrap-top-left {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 55%;
-}
-
-.wrap-top-left h2 {
+    flex: 0 1 55%;
+} h2 {
     font-size: 4rem;
     background-image: linear-gradient(120deg, #6EB9FC,#FA8DB6,#F7CA80);
     background-clip: text;
     color: transparent;
-}
-
-p {
+} p {
     font-size: 1.2rem;
-    color: #737373;
+    font-weight: 700;
+    color: #73737394;
     line-height: 2;
 }
 
 .img-work {
-    width: 60%;
+    flex: 0 1 60%;
+    max-width: 50%;
+    object-fit: contain;
+    transition: all 0.3s ease;
     position: absolute;
-    top: 0;
-    right: -16rem; /* Ajuste conforme necessário */
+    right: -235px;
+    top: 35%;
+    transform: translateY(-50%);
     z-index: 1;
 }
 
@@ -74,4 +79,86 @@ p {
 
 .search-btn:hover {
     background-color: #6abecd;
+}
+
+@media (max-width: 1240px) {
+    .wrap-home {
+        margin: 5rem 5rem;
+    }
+    .wrap-top {
+        margin: 6rem 0 10rem 0;
+    }
+    .wrap-top-left {
+        flex: 0 1 50%;
+    } h2 {
+        font-size: 3.5rem;
+    } p {
+        font-size: 1.1rem;
+    }
+    .img-work {
+        right: -12rem;
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 970px) {
+    .wrap-home {
+        margin: 5rem 3rem;
+    }
+    .wrap-top-left {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .wrap-top-left h2 {
+        font-size: 3rem;
+    }
+    .img-work {
+        position: absolute;
+        right: -130px;
+        width: 100%;
+        // margin-top: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrap-home {
+        margin: 4rem 1.5rem;
+        gap: 3rem;
+    }
+    .wrap-top {
+        margin-bottom: 23rem;
+    }
+    .wrap-top-left {
+        position: absolute;
+        bottom: 200px;
+    }
+
+    .wrap-top-left h2 {
+        font-size: 2.5rem;
+    }
+
+    .img-work {
+        width: auto;
+        max-width: 110%;
+        top: 140px;
+        right: -60px;
+    }
+
+    .search {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .search-field,
+    .search-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrap-home {
+        margin: 0 1.5rem;
+    }
 }
