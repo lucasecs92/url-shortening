@@ -127,22 +127,22 @@ p {
 }
 @media (max-width: 700px) {
   .wrap-home {
-    margin: 4rem 1.5rem;
+    margin: 4.5rem 1.5rem;
     gap: 3rem;
   }
   .wrap-top {
-    margin-bottom: 23rem;
+    margin-bottom: 24rem;
   }
   .wrap-top-left {
     position: absolute;
-    bottom: 200px;
+    bottom: 175px;
   }
   .wrap-top-left h2 {
     font-size: 2.5rem;
   }
   .img-work {
     width: auto;
-    max-width: 110%;
+    max-width: 100%;
     top: 140px;
     right: -60px;
   }
@@ -156,8 +156,16 @@ p {
     padding: 1rem;
   }
 }
+@media (max-width: 600px) {
+  .wrap-top {
+    margin-bottom: 21rem;
+  }
+}
 @media (max-width: 500px) {
   .wrap-home {
     margin: 0 1.5rem;
+  }
+  .img-work {
+    max-width: 110%;
   }
 }/*# sourceMappingURL=Home.css.map */
