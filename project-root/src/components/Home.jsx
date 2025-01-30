@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import '../styles/Home.css';
 import imgWork from '../images/illustration-working.svg';
-import { useState } from 'react';
+import axios from 'axios'; // Importamos axios para fazer requisições HTTP
 
 function Home() {
 
@@ -8,15 +9,27 @@ function Home() {
     const [inputValue, setInputValue] = useState('');
     // Estado para controlar a exibição da mensagem de erro
     const [error, setError] = useState(false);
+    const [shortenedUrls, setShortenedUrls] = useState([]); // Novo estado para armazenar as URLs encurtadas
+    const [loading, setLoading] = useState(false);
 
     // Função para lidar com o clique no botão
-    const handleShortenUrl = () => {
+    const handleShortenUrl = async () => {
         if (inputValue.trim() === '') {
             setError(true); // Mostra a mensagem de erro
         } else {
             setError(false); // Oculta a mensagem de erro
-            // Aqui você pode adicionar a lógica para encurtar a URL
-            console.log('Link digitado:', inputValue);
+            setLoading(true);
+            try {
+                const response = await axios.get(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(inputValue)}`);
+                
+                setShortenedUrls([...shortenedUrls, { original: inputValue, shortened: response.data }]);
+                setInputValue('');
+            } catch (error) {
+                console.error('Erro ao encurtar URL:', error.message);
+                setError(true);
+            } finally {
+                setLoading(false);
+            }
         }
     };
 
@@ -36,7 +49,7 @@ function Home() {
                 />
             </section>
 
-            <search className="search">
+            <section className="search">
                 <section className="search-field-container">
                     <input
                         className={`search-field ${error ? 'error-border' : ''}`}
@@ -54,11 +67,28 @@ function Home() {
                     )}
                 </section>
 
-                <button className="search-btn" type="submit" onClick={handleShortenUrl}>
-                    Encurtar URL
+                <button 
+                    className="search-btn" 
+                    type="submit" 
+                    onClick={handleShortenUrl} 
+                    disabled={loading}
+                >
+                    {loading ? 'Encurtando...' : 'Encurtar'}
                 </button>
-            </search>
+            </section>
             
+            {/* Renderizamos as URLs encurtadas */}
+            {shortenedUrls.length > 0 && (
+                <div className="shortened-urls">
+                    <h3>URLs Encurtadas:</h3>
+                    {shortenedUrls.map((url, index) => (
+                        <div key={index} className="url-item">
+                            <p>Original: {url.original}</p>
+                            <p>Encurtado: <a href={url.shortened} target="_blank" rel="noopener noreferrer">{url.shortened}</a></p>
+                        </div>
+                    ))}
+                </div>
+            )}
         </section>
     );
 }

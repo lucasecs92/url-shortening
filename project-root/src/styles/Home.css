@@ -131,6 +131,30 @@ p {
   left: 0;
 }
 
+.shortened-urls {
+  margin-top: 2rem;
+}
+
+.url-item {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.url-item p {
+  margin: 0;
+}
+
+.url-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.url-item a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 1800px) {
   .wrap-home {
     margin: 0 20rem;
