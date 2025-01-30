@@ -56,12 +56,12 @@ function Home() {
                     />
                 </section>
 
-                <section className="search">
-                    <section className="search-field-container">
+                <section className="url">
+                    <section className="url-field-container">
                         <input
-                            className={`search-field ${error ? 'error-border' : ''}`}
-                            id="search-field"
-                            type="search"
+                            className={`url-field ${error ? 'error-border' : ''}`}
+                            id="url-field"
+                            type="text"
                             placeholder="Cole o link aqui..."
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)} // Atualiza o estado com o valor digitado
@@ -75,7 +75,7 @@ function Home() {
                     </section>
 
                     <button 
-                        className="search-btn" 
+                        className="url-btn" 
                         type="submit" 
                         onClick={handleShortenUrl} 
                         disabled={loading}

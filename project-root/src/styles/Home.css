@@ -50,7 +50,7 @@ h2 {
   z-index: 1;
 }
 
-.search {
+.url {
   padding: 2.5rem;
   background-image: url("../images/bg-shorten-desktop.svg");
   background-color: hsl(257, 27%, 26%);
@@ -62,13 +62,13 @@ h2 {
   gap: 1rem;
 }
 
-.search-field-container {
+.url-field-container {
   width: 100%;
   position: relative;
   border-radius: 5px;
 }
 
-.search-field {
+.url-field {
   width: 100%;
   border-radius: 5px;
   border: 2px solid transparent;
@@ -78,20 +78,20 @@ h2 {
   transition: border-color 0.3s ease;
 }
 
-.search-field::-moz-placeholder {
+.url-field::-moz-placeholder {
   font-weight: 800;
   color: rgba(115, 115, 115, 0.5803921569);
   -moz-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
-.search-field::placeholder {
+.url-field::placeholder {
   font-weight: 800;
   color: rgba(115, 115, 115, 0.5803921569);
   transition: color 0.3s ease;
 }
 
-.search-btn {
+.url-btn {
   width: 25%;
   border-radius: 5px;
   border: none;
@@ -102,7 +102,7 @@ h2 {
   font-weight: bold;
 }
 
-.search-btn:hover {
+.url-btn:hover {
   background-color: #6abecd;
 }
 
@@ -205,14 +205,14 @@ h2 {
     top: 140px;
     right: -60px;
   }
-  .search {
+  .url {
     flex-direction: column;
     margin-top: 2.5rem;
     padding: 2rem;
     gap: 2.5rem;
   }
-  .search-field,
-  .search-btn {
+  .url-field,
+  .url-btn {
     width: 100%;
     padding: 1rem;
   }
