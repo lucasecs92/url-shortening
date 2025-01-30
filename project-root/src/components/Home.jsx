@@ -45,7 +45,7 @@ function Home() {
                 <section className="wrap-top">
                     <section className="wrap-top-left">
                         <h2>Encurtador de URL</h2>
-                        <p>
+                        <p className='description'>
                             Simplifique seus links. Gere links curtos, fáceis de lembrar e de compartilhar.
                         </p>
                     </section>
