@@ -2,12 +2,15 @@ import Home from './components/Home';
 import './styles/App.css';
 
 function App() {
+  const handleRefresh = () => {
+    window.location.reload();
+  };
 
   return (
     <>
       <section className="container-app">
         <header>
-          <h1>Shortly</h1>
+          <h1 onClick={handleRefresh}>Shortly</h1>
         </header>
         
         <main>
@@ -18,4 +21,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

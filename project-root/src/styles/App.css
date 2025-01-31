@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #fff;
   color: black;
 }
 
@@ -20,6 +19,7 @@ header h1 {
   font-family: "Karla", serif;
   font-weight: 800;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 1240px) {
