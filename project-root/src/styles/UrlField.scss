@@ -1,0 +1,84 @@
+.url {
+    padding: 2.5rem;
+    background-image: url('../images/bg-shorten-desktop.svg');
+    background-color: hsl(257, 27%, 26%);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    border-radius: 10px;
+    width: 100%;
+
+    display: flex;
+    gap: 1rem;
+}
+
+.url-field-container {
+    width: 100%;
+    position: relative; 
+    border-radius: 5px;
+}
+
+.url-field {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    outline: none;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+        font-weight: 800;
+        color: #73737394; 
+        transition: color 0.3s ease;
+    }
+}
+
+.url-btn {
+    width: 25%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #2AD0D3;
+    color: #fff;
+    font-weight: bold;
+    
+    &:hover {
+        background-color: #6abecd;
+    }
+}
+
+.error-border {
+    border-color: rgb(248, 73, 73);
+
+    &::placeholder {
+    color: rgb(250, 148, 148); /* Placeholder vermelho quando houver erro */
+    }
+}
+
+.error-message {
+    display: block;
+    color: rgb(248, 73, 73);
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 8px;
+    position: absolute;
+    bottom: -24px; 
+    left: 0;
+}
+
+@media (max-width: 700px) {
+    .url {
+        flex-direction: column;
+        margin-top: 2.5rem;
+        padding: 2rem;
+        gap: 2.5rem;
+    }
+    .url-field,
+    .url-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+}

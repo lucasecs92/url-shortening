@@ -5,16 +5,13 @@
 
 .shortened-urls {
   margin: 0rem 30rem;
-  background-color: transparent;
 }
 
 .url-item {
-  background-color: transparent;
   border-radius: 5px;
   display: flex;
   justify-content: flex-start;
 }
-
 .url-item span {
   padding: 1rem 0;
   display: flex;
@@ -22,13 +19,11 @@
   gap: 2rem;
   border-radius: 5px;
 }
-
 .url-item a {
   font-weight: 700;
   color: #2AD0D3;
   text-decoration: none;
 }
-
 .url-item a:hover {
   text-decoration: underline;
 }
@@ -42,7 +37,6 @@
   cursor: pointer;
   font-weight: bold;
 }
-
 .copy-btn:hover {
   background-color: #6abecd;
 }

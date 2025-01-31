@@ -21,8 +21,7 @@
   gap: 1rem;
   flex: 0 1 55%;
 }
-
-h2 {
+.wrap-top-left h2 {
   font-size: 4rem;
   background-image: linear-gradient(120deg, #6EB9FC, #FA8DB6, #F7CA80);
   -webkit-background-clip: text;
@@ -50,87 +49,6 @@ h2 {
   z-index: 1;
 }
 
-.url {
-  padding: 2.5rem;
-  background-image: url("../images/bg-shorten-desktop.svg");
-  background-color: hsl(257, 27%, 26%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  width: 100%;
-  display: flex;
-  gap: 1rem;
-}
-
-.url-field-container {
-  width: 100%;
-  position: relative;
-  border-radius: 5px;
-}
-
-.url-field {
-  width: 100%;
-  border-radius: 5px;
-  border: 2px solid transparent;
-  outline: none;
-  padding: 1rem;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.url-field::-moz-placeholder {
-  font-weight: 800;
-  color: rgba(115, 115, 115, 0.5803921569);
-  -moz-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.url-field::placeholder {
-  font-weight: 800;
-  color: rgba(115, 115, 115, 0.5803921569);
-  transition: color 0.3s ease;
-}
-
-.url-btn {
-  width: 25%;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: #2AD0D3;
-  color: #fff;
-  font-weight: bold;
-}
-
-.url-btn:hover {
-  background-color: #6abecd;
-}
-
-.error-border {
-  border-color: rgb(248, 73, 73);
-}
-
-.error-border::-moz-placeholder {
-  color: rgb(250, 148, 148); /* Placeholder vermelho quando houver erro */
-}
-
-.error-border::placeholder {
-  color: rgb(250, 148, 148); /* Placeholder vermelho quando houver erro */
-}
-
-.error-message {
-  display: block;
-  color: rgb(248, 73, 73);
-  background: none;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: italic;
-  margin-top: 8px;
-  position: absolute;
-  bottom: -24px;
-  left: 0;
-}
-
 @media (max-width: 1800px) {
   .wrap-home {
     margin: 0 20rem;
@@ -155,7 +73,7 @@ h2 {
   .wrap-top-left {
     flex: 0 1 50%;
   }
-  h2 {
+  .wrap-top-left h2 {
     font-size: 3.5rem;
   }
   .description {
@@ -204,17 +122,6 @@ h2 {
     max-width: 100%;
     top: 140px;
     right: -60px;
-  }
-  .url {
-    flex-direction: column;
-    margin-top: 2.5rem;
-    padding: 2rem;
-    gap: 2.5rem;
-  }
-  .url-field,
-  .url-btn {
-    width: 100%;
-    padding: 1rem;
   }
 }
 @media (max-width: 600px) {

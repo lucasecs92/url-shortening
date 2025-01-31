@@ -5,35 +5,30 @@
 
 .shortened-urls {
     margin: 0rem 30rem;
-    background-color: transparent;
-    // padding-bottom: 4rem;
 }
 
 .url-item {
-    background-color: transparent;
     border-radius: 5px;
     display: flex;
     justify-content: flex-start;
-    // background-color: hsla(258, 26%, 77%, 0.192);
-}
 
-.url-item span {
-    // margin: 1rem 0;
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    border-radius: 5px;
-}
+    span {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        border-radius: 5px;
+    }
 
-.url-item a {
-    font-weight: 700;
-    color: #2AD0D3;
-    text-decoration: none;
-}
+    a {
+        font-weight: 700;
+        color: #2AD0D3;
+        text-decoration: none;
 
-.url-item a:hover {
-    text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .copy-btn {
@@ -44,10 +39,10 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-}
 
-.copy-btn:hover {
-    background-color: #6abecd;
+    &:hover {
+        background-color: #6abecd;
+    }
 }
 
 @media (max-width: 1800px) {
