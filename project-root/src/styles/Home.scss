@@ -48,6 +48,12 @@
     z-index: 1;
 }
 
+.dark-mode {
+    .description {
+        color: #fff;
+    }
+}
+
 
 @media (max-width: 1800px) {
     .wrap-home {
