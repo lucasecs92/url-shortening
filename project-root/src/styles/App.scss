@@ -15,14 +15,35 @@ body {
 
 header {
     margin: 1.5rem 10rem;
+    display: flex;
+    justify-content: space-between;
 
+    .toggle-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    
     h1 {
         font-family: "Karla", serif;
         font-weight: 800;
         font-size: 2rem;
         cursor: pointer;
     }
-} 
+}
+
+.dark-mode {
+    * {
+        background-color: #212830 !important;
+    }
+    h1 {
+        color: #fff !important;
+    }
+    .toggle-button svg path {
+        color: #fff !important;
+    }
+}
 
 @media (max-width: 1240px) {
     header {

@@ -45,6 +45,12 @@
     }
 }
 
+.dark-mode {
+    .copy-btn {
+        background-color: #2AD0D3 !important;
+    }
+}
+
 @media (max-width: 1800px) {
     .shortened-urls {
         margin: 0 20rem;
