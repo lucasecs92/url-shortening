@@ -28,7 +28,7 @@ const UrlField = ({ onShorten }) => {
             setError(false);
             setLoading(true);
             try {
-                const response = await axios.get(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(inputValue)}`);
+                const response = await axios.get(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(inputValue)}`); // api pública: não requer cadastro ou chave
 
                 onShorten({ original: inputValue, shortened: response.data });
                 setInputValue('');
