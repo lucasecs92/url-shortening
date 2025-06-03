@@ -28,10 +28,10 @@ function ShortenedUrlsList({ urls, onCopy }) {
 
 ShortenedUrlsList.propTypes = {
     urls: PropTypes.arrayOf(
-      PropTypes.shape({
-        original: PropTypes.string.isRequired,
-        shortened: PropTypes.string.isRequired,
-      })
+        PropTypes.shape({
+            original: PropTypes.string.isRequired,
+            shortened: PropTypes.string.isRequired,
+        })
     ).isRequired,
     onCopy: PropTypes.func.isRequired,
 };

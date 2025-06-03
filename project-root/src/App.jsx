@@ -17,8 +17,7 @@ function App() {
   };
 
   const modeIcon = isDarkMode ? <MdOutlineWbSunny />
-  : <IoMdMoon />;
-
+    : <IoMdMoon />;
 
   return (
     <>
@@ -27,9 +26,9 @@ function App() {
           <h1 onClick={handleRefresh}>Shortly</h1>
           <button onClick={toggleDarkMode} className="toggle-button">{modeIcon}</button>
         </header>
-        
+
         <main>
-          <Home/>
+          <Home />
         </main>
       </section>
     </>
