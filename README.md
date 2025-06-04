@@ -1,4 +1,4 @@
-# Shortly: Encurtador de URLs Moderno e Intuitivo
+# Shortly: Encurtador de URLs 
 
 <img src="./screenshot/screenshot.png" width="60%">
 
