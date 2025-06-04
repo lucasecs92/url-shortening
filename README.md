@@ -1,8 +1,8 @@
-# Shortly: Encurtador de URLs 
+## Shortly: Encurtador de URLs 
 
 <img src="./screenshot/screenshot.png" width="60%">
 
-## Principais Funcionalidades:
+### Principais Funcionalidades:
 
   - Encurtamento de URL Simplificado: Basta colar o link original no campo designado e, com um clique no botão "Encurtar", o sistema utiliza a API pública do TinyURL para gerar um link curto instantaneamente.
   - Lista de URLs Encurtadas: Todas as URLs encurtadas durante a sessão são exibidas em uma lista organizada abaixo do campo de entrada, mostrando o link original (implícito) e o novo link curto.
@@ -11,7 +11,7 @@
   - Validação e Feedback: A aplicação fornece feedback visual, como mensagens de erro caso o campo de URL esteja vazio, e um estado de "carregando" durante o processo de encurtamento, melhorando a experiência do usuário.
   - Atualização Fácil: Um clique no título "Shortly" recarrega a página, permitindo reiniciar o processo de forma simples.
     
-## Tecnologias Utilizadas:
+### Tecnologias Utilizadas:
 
   - React: Biblioteca JavaScript para construção da interface de usuário componentizada.
   - Hooks do React (useState): Para gerenciamento de estado local dos componentes (valor do input, lista de URLs, estado de dark mode, erro, loading).
