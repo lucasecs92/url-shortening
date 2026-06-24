@@ -6,7 +6,7 @@ import { IoMdMoon } from "react-icons/io";
 
 function App() {
   const handleRefresh = () => {
-    window.location.reload();
+    globalThis.location.reload();
   };
 
   const [isDarkMode, setIsDarkMode] = useState(false);
