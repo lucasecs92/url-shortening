@@ -20,18 +20,16 @@ function App() {
     : <IoMdMoon />;
 
   return (
-    <>
-      <section className="container-app">
-        <header>
-          <h1 onClick={handleRefresh}>Shortly</h1>
-          <button onClick={toggleDarkMode} className="toggle-button">{modeIcon}</button>
-        </header>
+    <section className="container-app">
+      <header>
+        <h1 onClick={handleRefresh}>Shortly</h1>
+        <button onClick={toggleDarkMode} className="toggle-button">{modeIcon}</button>
+      </header>
 
-        <main>
-          <Home />
-        </main>
-      </section>
-    </>
+      <main>
+        <Home />
+      </main>
+    </section>
   )
 }
 
