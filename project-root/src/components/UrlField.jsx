@@ -1,18 +1,16 @@
 import { useState } from 'react';
 import axios from 'axios';
-import '../styles/UrlField.css';
 import PropTypes from 'prop-types';
+import '../styles/UrlField.css';
 
 const UrlField = ({ onShorten }) => {
-    // Prop types validation
-    UrlField.propTypes = {
-        onShorten: PropTypes.func.isRequired,
-    };
-
-    // Estado para controlar o valor do campo de busca
+    // Estado para controlar o valor do campo
     const [inputValue, setInputValue] = useState('');
-    // Estado para controlar a exibição da mensagem de erro
+
+    // Estado para controlar a mensagem de erro
     const [error, setError] = useState(false);
+
+    // Estado para controlar o carregamento
     const [loading, setLoading] = useState(false);
 
     const handleInputChange = (e) => {
@@ -20,24 +18,32 @@ const UrlField = ({ onShorten }) => {
         setError(false);
     };
 
-    // Função para lidar com o clique no botão
+    // Função para encurtar a URL
     const handleShortenUrl = async () => {
         if (inputValue.trim() === '') {
             setError(true);
-        } else {
-            setError(false);
-            setLoading(true);
-            try {
-                const response = await axios.get(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(inputValue)}`); // api pública: não requer cadastro ou chave
+            return;
+        }
 
-                onShorten({ original: inputValue, shortened: response.data });
-                setInputValue('');
-            } catch (error) {
-                console.error('Erro ao encurtar URL:', error.message);
-                setError(true);
-            } finally {
-                setLoading(false);
-            }
+        setError(false);
+        setLoading(true);
+
+        try {
+            const response = await axios.get(
+                `https://tinyurl.com/api-create.php?url=${encodeURIComponent(inputValue.trim())}`
+            );
+
+            onShorten({
+                original: inputValue.trim(),
+                shortened: response.data,
+            });
+
+            setInputValue('');
+        } catch (error) {
+            console.error('Erro ao encurtar URL:', error.message);
+            setError(true);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -51,17 +57,20 @@ const UrlField = ({ onShorten }) => {
                     placeholder="Cole o link aqui..."
                     value={inputValue}
                     onChange={handleInputChange}
+                    aria-invalid={error}
+                    aria-describedby={error ? 'url-error' : undefined}
                 />
+
                 {error && (
-                    <span className="error-message">
-                        Por favor, adicione um link
+                    <span id="url-error" className="error-message">
+                        Não foi possível encurtar o link. Verifique a URL e tente novamente.
                     </span>
                 )}
             </section>
-            
+
             <button
                 className="url-btn"
-                type="submit"
+                type="button"
                 onClick={handleShortenUrl}
                 disabled={loading}
             >
@@ -69,6 +78,10 @@ const UrlField = ({ onShorten }) => {
             </button>
         </section>
     );
+};
+
+UrlField.propTypes = {
+    onShorten: PropTypes.func.isRequired,
 };
 
 export default UrlField;
