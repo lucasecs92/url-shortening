@@ -12,7 +12,7 @@ warn() { echo -e "${YELLOW}[ATENÇÃO]${NC} $*"; }
 erro() { echo -e "${RED}[ERRO]${NC} $*" >&2; exit 1; }
 
 echo "======================================"
-echo " Manutenção e deploy Next.js"
+echo " Manutenção e deploy React + Vite"
 echo "======================================"
 
 # 1. Validar o projeto
